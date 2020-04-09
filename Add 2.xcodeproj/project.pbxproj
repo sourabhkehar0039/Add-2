@@ -13,6 +13,7 @@
 		F43BFEB6243EB5BF0091F048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43BFEB4243EB5BF0091F048 /* Main.storyboard */; };
 		F43BFEB8243EB5C00091F048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43BFEB7243EB5C00091F048 /* Assets.xcassets */; };
 		F43BFEBB243EB5C00091F048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43BFEB9243EB5C00091F048 /* LaunchScreen.storyboard */; };
+		F43BFEC4243EC0240091F048 /* HVD_Comic_Serif_Pro.otf in Resources */ = {isa = PBXBuildFile; fileRef = F43BFEC3243EC0240091F048 /* HVD_Comic_Serif_Pro.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		F43BFEB7243EB5C00091F048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43BFEBA243EB5C00091F048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43BFEBC243EB5C00091F048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43BFEC2243EBFD20091F048 /* HVD_Comic_Serif_Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HVD_Comic_Serif_Pro.otf; sourceTree = "<group>"; };
+		F43BFEC3243EC0240091F048 /* HVD_Comic_Serif_Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HVD_Comic_Serif_Pro.otf; path = "../../../Downloads/HVD-Comic-Serif-Pro/HVD_Comic_Serif_Pro.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				F43BFEB7243EB5C00091F048 /* Assets.xcassets */,
 				F43BFEB9243EB5C00091F048 /* LaunchScreen.storyboard */,
 				F43BFEBC243EB5C00091F048 /* Info.plist */,
+				F43BFEC3243EC0240091F048 /* HVD_Comic_Serif_Pro.otf */,
+				F43BFEC2243EBFD20091F048 /* HVD_Comic_Serif_Pro.otf */,
 			);
 			path = "Add 2";
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			files = (
 				F43BFEBB243EB5C00091F048 /* LaunchScreen.storyboard in Resources */,
 				F43BFEB8243EB5C00091F048 /* Assets.xcassets in Resources */,
+				F43BFEC4243EC0240091F048 /* HVD_Comic_Serif_Pro.otf in Resources */,
 				F43BFEB6243EB5BF0091F048 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
