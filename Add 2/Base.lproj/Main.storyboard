@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HVD_Comic_Serif_Pro.otf">
+            <string>HVDComicSerifPro</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -15,55 +20,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="UyO-jK-oEE">
-                                <rect key="frame" x="0.0" y="-5" width="414" height="907"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="UyO-jK-oEE">
+                                <rect key="frame" x="0.0" y="20" width="414" height="856"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="scoreLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soj-hQ-cdF">
-                                <rect key="frame" x="67" y="78" width="80" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-6z-UNL">
+                                <rect key="frame" x="20" y="50" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4bN-hM-fbY"/>
+                                    <constraint firstAttribute="width" constant="120" id="CrU-SO-gf3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soj-hQ-cdF">
+                                <rect key="frame" x="57" y="60" width="58" height="31"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-6z-UNL">
-                                <rect key="frame" x="30" y="70" width="127" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="180-p4-6Ix">
+                                <rect key="frame" x="170" y="51.999999999999993" width="244" height="50.000000000000021"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="EJI-CS-8uG"/>
+                                    <constraint firstAttribute="height" constant="50" id="VVd-Xr-2Pf"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="180-p4-6Ix">
-                                <rect key="frame" x="250" y="70" width="144" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TimeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmT-jJ-EsI">
-                                <rect key="frame" x="262" y="78" width="87" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmT-jJ-EsI">
+                                <rect key="frame" x="242" y="63.5" width="60" height="27"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="eep-jc-E1A">
-                                <rect key="frame" x="87" y="259" width="262" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="eep-jc-E1A">
+                                <rect key="frame" x="57" y="162" width="300" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="gle-XY-f7m"/>
+                                    <constraint firstAttribute="height" constant="130" id="rJj-3f-77n"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="numberLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDX-wq-8t4">
-                                <rect key="frame" x="156" y="307" width="125" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDX-wq-8t4">
+                                <rect key="frame" x="133" y="185" width="148.5" height="84"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                <color key="textColor" red="0.52941176469999995" green="0.30980392159999998" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="input@2x" translatesAutoresizingMaskIntoConstraints="NO" id="DAW-gM-UFC">
-                                <rect key="frame" x="87" y="494" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QA7-rx-Eta">
-                                <rect key="frame" x="143" y="541" width="123" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="input" textAlignment="natural" minimumFontSize="17" background="input" translatesAutoresizingMaskIntoConstraints="NO" id="QA7-rx-Eta">
+                                <rect key="frame" x="82" y="312" width="250" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="5fM-GF-NFB"/>
+                                    <constraint firstAttribute="width" constant="250" id="P75-V8-eFH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add 1 to each of the digits.  so, 1357 becomes 2468" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KV-4a-URk">
+                                <rect key="frame" x="19.5" y="487" width="375" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Mhv-zT-GF2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RmT-jJ-EsI" firstAttribute="centerY" secondItem="180-p4-6Ix" secondAttribute="centerY" id="8AT-a5-T0L"/>
+                            <constraint firstItem="soj-hQ-cdF" firstAttribute="centerY" secondItem="MqY-6z-UNL" secondAttribute="centerY" id="9IU-1e-Lc4"/>
+                            <constraint firstItem="7KV-4a-URk" firstAttribute="top" secondItem="QA7-rx-Eta" secondAttribute="bottom" constant="65" id="Cq8-k0-rne"/>
+                            <constraint firstItem="soj-hQ-cdF" firstAttribute="centerX" secondItem="MqY-6z-UNL" secondAttribute="centerX" id="Kjg-sN-r90"/>
+                            <constraint firstItem="KDX-wq-8t4" firstAttribute="centerX" secondItem="eep-jc-E1A" secondAttribute="centerX" id="Ose-VS-Puf"/>
+                            <constraint firstItem="MqY-6z-UNL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="WGU-7K-q0Z"/>
+                            <constraint firstItem="QA7-rx-Eta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XlM-9Z-NQ5"/>
+                            <constraint firstItem="KDX-wq-8t4" firstAttribute="centerY" secondItem="eep-jc-E1A" secondAttribute="centerY" id="byE-Lw-ylw"/>
+                            <constraint firstAttribute="bottom" secondItem="UyO-jK-oEE" secondAttribute="bottom" constant="20" symbolic="YES" id="fcz-LA-vBi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7KV-4a-URk" secondAttribute="bottom" constant="50" id="hCc-7A-RJb"/>
+                            <constraint firstItem="eep-jc-E1A" firstAttribute="top" secondItem="180-p4-6Ix" secondAttribute="bottom" constant="60" id="lJq-t5-48L"/>
+                            <constraint firstItem="UyO-jK-oEE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q7d-EO-wV7"/>
+                            <constraint firstItem="RmT-jJ-EsI" firstAttribute="centerX" secondItem="180-p4-6Ix" secondAttribute="centerX" constant="-20" id="rpc-bE-9tq"/>
+                            <constraint firstItem="180-p4-6Ix" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="sZr-aW-6Jo"/>
+                            <constraint firstItem="MqY-6z-UNL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="stJ-zh-iPe"/>
+                            <constraint firstItem="180-p4-6Ix" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tYX-hR-u2R"/>
+                            <constraint firstItem="QA7-rx-Eta" firstAttribute="top" secondItem="eep-jc-E1A" secondAttribute="bottom" constant="20" id="uUr-r3-DB5"/>
+                            <constraint firstItem="7KV-4a-URk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ulb-Bp-5e5"/>
+                            <constraint firstItem="UyO-jK-oEE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="vQ6-vO-uem"/>
+                            <constraint firstItem="eep-jc-E1A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xeM-4z-96F"/>
+                            <constraint firstItem="UyO-jK-oEE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yTT-1D-GVB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -74,7 +115,7 @@
     </scenes>
     <resources>
         <image name="background" width="375" height="667"/>
-        <image name="input@2x" width="256" height="111"/>
+        <image name="input" width="256" height="111"/>
         <image name="number" width="300" height="122"/>
         <image name="score" width="119" height="51"/>
         <image name="time" width="149" height="49"/>
