@@ -80,7 +80,10 @@ class GameViewController: UIViewController {
             
             if timer == nil{
                 timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
-                    if self.seconds <= 60{
+                    if self.seconds == 0{
+                        self.finishGame()
+                    }
+                    else if self.seconds <= 60{
                         self.seconds -= 1
                         self.updateTimeLabel()
                     }
@@ -88,5 +91,22 @@ class GameViewController: UIViewController {
             }
         }
        }
+    func finishGame(){
+        
+        timer?.invalidate()
+        timer = nil
+        
+        let alert = UIAlertController(title: "Time is Up!", message: "Your Time is Up You got a score Of \(score) points", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK, Start new Game", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        score = 0
+        seconds = 60
+        updateTimeLabel()
+        updateScoreLabel()
+        updateNumberLabel()
+    }
 }
+
+
 
