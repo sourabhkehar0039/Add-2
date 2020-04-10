@@ -42,6 +42,31 @@ class GameViewController: UIViewController {
         guard inputText.count == 4 else{
             return
         }
+        var isCorrect = true
+        
+        for n in 0..<4{
+            
+            var input = inputText.integer(at: n)
+            var number = numberText.integer(at: n)
+            
+            if input == 0{
+                input = 10
+            }
+            
+            if input != number+1{
+                isCorrect = false
+                break
+            }
+            
+            if isCorrect{
+                score += 1
+            }else{
+                score -= 1
+            }
+            updateNumberLabel()
+            updateScoreLabel()
+            inputField?.text = ""
+        }
        }
 }
 

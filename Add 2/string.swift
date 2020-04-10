@@ -20,4 +20,11 @@ extension String{
         }
         return result
     }
+    
+    func integer(at n: Int) -> Int{
+        
+        let index = self.index(self.startIndex, offsetBy: n)
+        
+        return self[index].wholeNumberValue ?? 0
+    }
 }
