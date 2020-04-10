@@ -14,13 +14,34 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var inputField: UITextField!
+   
     
     var score = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
+        
+        updateScoreLabel()
+        updateNumberLabel()
     }
-
-
+    func updateScoreLabel(){
+        
+        ScoreLabel?.text = String(score)
+    }
+    
+    func updateNumberLabel(){
+        numberLabel?.text = String.randomNumber(length: 4)
+    }
+    @IBAction func inputDidChange(_ sender: Any) {
+           
+           guard let numberText = numberLabel.text, let inputText = inputField.text else{
+               return
+           }
+        
+        guard inputText.count == 4 else{
+            return
+        }
+       }
 }
 
