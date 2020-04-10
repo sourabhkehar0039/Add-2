@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var inputField: UITextField!
    
+    var timer:Timer?
+    var seconds = 60
     
     var score = 0
     override func viewDidLoad() {
@@ -24,6 +26,7 @@ class GameViewController: UIViewController {
         
         updateScoreLabel()
         updateNumberLabel()
+        updateTimeLabel()
     }
     func updateScoreLabel(){
         
@@ -33,6 +36,14 @@ class GameViewController: UIViewController {
     func updateNumberLabel(){
         numberLabel?.text = String.randomNumber(length: 4)
     }
+    
+    func updateTimeLabel(){
+        let min = (seconds/60) % 60
+        let sec = seconds % 60
+        timeLabel?.text = String(format: "%02d", min) + ":" + String(format: "%02d", sec)
+        
+    }
+    
     @IBAction func inputDidChange(_ sender: Any) {
            
            guard let numberText = numberLabel.text, let inputText = inputField.text else{
@@ -66,6 +77,15 @@ class GameViewController: UIViewController {
             updateNumberLabel()
             updateScoreLabel()
             inputField?.text = ""
+            
+            if timer == nil{
+                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+                    if self.seconds <= 60{
+                        self.seconds -= 1
+                        self.updateTimeLabel()
+                    }
+                })
+            }
         }
        }
 }
